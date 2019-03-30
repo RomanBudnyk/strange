@@ -25,21 +25,20 @@ public class Runner {
                 }
             }
         }
-
         return false;
     }
 
     private int[] convert(int num) {
         String number = Integer.toString(num);
-        int[] arrayInt = new int[number.length()];
-        for (int i = 0; i < number.length(); i++) {
-            arrayInt[i] = number.charAt(i) - '0';
-        }
-        return arrayInt;
+        return getInts(number);
     }
 
     private int[] convert(double num) {
         String number = Double.toString(num);
+        return getInts(number);
+    }
+
+    private int[] getInts(String number) {
         int[] arrayInt = new int[number.length()];
         for (int i = 0; i < number.length(); i++) {
             arrayInt[i] = number.charAt(i) - '0';

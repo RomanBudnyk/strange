@@ -1,5 +1,7 @@
 package com.company.code;
 
+import org.jetbrains.annotations.Contract;
+
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.Scanner;
@@ -10,6 +12,7 @@ class Calculations {
         return scanner.nextDouble();
     }
 
+    @Contract(pure = true)
     static int square(double num) {
         return (int) Math.pow(num, 2);
     }
